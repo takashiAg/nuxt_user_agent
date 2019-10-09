@@ -1,8 +1,15 @@
+import path from 'path'
+import fs from 'fs'
 export default {
   mode: 'spa',
   server: {
     port: 8000, // デフォルト: 3000
-    host: 'localhost', // デフォルト: localhost
+    host: '0.0.0.0', // デフォルト: localhost
+
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, 'server/mysslserver.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'server/mysslserver.crt'))
+    }
   },
   /*
    ** Headers of the page
