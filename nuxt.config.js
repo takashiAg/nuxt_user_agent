@@ -1,5 +1,9 @@
 export default {
   mode: 'spa',
+  server: {
+    port: 8000, // デフォルト: 3000
+    host: 'localhost', // デフォルト: localhost
+  },
   /*
    ** Headers of the page
    */
@@ -40,7 +44,8 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-user-agent'
   ],
   /*
    ** Axios module configuration

@@ -1,35 +1,39 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        user_agent
-      </h1>
-      <h2 class="subtitle">
-        My primo Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <ul class="container">
+      <li>{{ $ua.deviceType() }}</li>
+      <li>{{ $ua.os() }}</li>
+      <li>{{ $ua.osVersion() }}</li>
+      <li>{{ $ua.browser() }}</li>
+      <li>{{ $ua.browserVersion() }}</li>
+      <li>{{ $ua.browserVendor() }}</li>
+      <li>{{ $ua.isFromIphone() ? 'iPhone' : 'not iPhone' }}</li>
+      <li>{{ $ua.isFromIpad() ? 'iPad' : 'not iPad' }}</li>
+      <li>{{ $ua.isFromIpod() ? 'iPod' : 'not iPod' }}</li>
+      <li>{{ $ua.isFromIos() ? 'iOS' : 'not iOS' }}</li>
+      <li>{{ $ua.isFromAndroidOs() ? 'Android OS' : 'not Android OS' }}</li>
+      <li>{{ $ua.isFromAppliance() ? 'Appliance' : 'not Appliance' }}</li>
+      <li>{{ userAgent }}</li>
+    </ul>
+    <ul>
+      <li v-for="(device, index) in devices" :key="index">{{ device }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
+  data() {
+    return {
+      userAgent: '',
+      devices: []
+    }
+  },
+  async mounted() {
+    if (process.browser) {
+      this.userAgent = window.navigator.userAgent
+      this.devices = await window.navigator.mediaDevices.enumerateDevices()
+    }
   }
 }
 </script>

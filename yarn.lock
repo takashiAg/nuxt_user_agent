@@ -2387,6 +2387,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+cross-env@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-6.0.3.tgz#4256b71e49b3a40637a0ce70768a6ef5c72ae941"
+  integrity sha512-+KqxF6LCvfhWvADcDPqo64yVIB31gv/jQulX2NGzKS/g3GEVz6/pt4wjHFtFWsHMddebWD/sDthJemzM4MaAag==
+  dependencies:
+    cross-spawn "^7.0.0"
+
 cross-spawn@^6.0.5:
   version "6.0.5"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
@@ -3324,7 +3331,7 @@ expand-brackets@^2.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-express@^4.16.3:
+express@^4.16.3, express@^4.17.1:
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
   integrity sha512-mHJ9O79RqluphRrcw2X/GTh3k9tVv8YcoyY4Kkh4WDMUYKRZUq0h1o0w2rrrxBqM7VoeUVqgb27xlEMXTnYt4g==
@@ -5295,6 +5302,13 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
+
+nuxt-user-agent@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/nuxt-user-agent/-/nuxt-user-agent-1.2.2.tgz#696462fcbdbc32d5be2bc63976afd9eef6e9f6b7"
+  integrity sha512-Z9d+r1/PzJAvrr4rX70IWvRyI3qw3RukAGrRZPZ9WeByuCWmVKiW8G1AhdkUOyrDrVoBUC59iLqIVkop/NjSuQ==
+  dependencies:
+    woothee "^1.8.1"
 
 nuxt@^2.0.0:
   version "2.10.0"
@@ -8134,6 +8148,11 @@ widest-line@^3.1.0:
   integrity sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==
   dependencies:
     string-width "^4.0.0"
+
+woothee@^1.8.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/woothee/-/woothee-1.10.1.tgz#cc38e74969efc9c20083ba93bb5df30b7cd0e9fe"
+  integrity sha512-UjQSKaOyphSqaKR5JqScCUuK3ETW0YXODOBY0Hrr3DcJ765SQ1vEUQrI/rGrbpZ1jKHc3Yx8F89oY0NNmSo33Q==
 
 wordwrap@~1.0.0:
   version "1.0.0"
