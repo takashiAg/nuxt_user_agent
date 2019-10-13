@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="container">
+    <ul>
       <li>{{ $ua.deviceType() }}</li>
       <li>{{ $ua.os() }}</li>
       <li>{{ $ua.osVersion() }}</li>
@@ -15,8 +15,11 @@
       <li>{{ $ua.isFromAppliance() ? 'Appliance' : 'not Appliance' }}</li>
       <li>{{ userAgent }}</li>
     </ul>
+    <hr />
     <ul>
-      <li v-for="(device, index) in devices" :key="index">{{ device }}</li>
+      <li v-for="(device, index) in devices" :key="index">
+        {{ device.deviceId }}
+      </li>
     </ul>
   </div>
 </template>
@@ -33,6 +36,7 @@ export default {
     if (process.browser) {
       this.userAgent = window.navigator.userAgent
       this.devices = await window.navigator.mediaDevices.enumerateDevices()
+      console.log(this.devices)
     }
   }
 }
