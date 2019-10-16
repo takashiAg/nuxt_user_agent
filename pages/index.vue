@@ -13,12 +13,25 @@
       <li>{{ $ua.isFromIos() ? 'iOS' : 'not iOS' }}</li>
       <li>{{ $ua.isFromAndroidOs() ? 'Android OS' : 'not Android OS' }}</li>
       <li>{{ $ua.isFromAppliance() ? 'Appliance' : 'not Appliance' }}</li>
+    </ul>
+    <hr />
+    <ul>
       <li>rawUserAgent:{{ userAgent }}</li>
     </ul>
     <hr />
     <ul>
       <li v-for="(device, index) in devices" :key="index">
         {{ device.deviceId }}
+      </li>
+    </ul>
+    <hr />
+    <ul>
+      <li>
+        {{
+          $ua.isFromIos() && $ua.browser() === 'Safari'
+            ? 'いい感じ'
+            : '使えないブラウザ'
+        }}
       </li>
     </ul>
   </div>
