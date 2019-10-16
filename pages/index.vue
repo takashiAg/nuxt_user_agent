@@ -28,7 +28,9 @@
     <ul>
       <li>
         {{
-          $ua.isFromIos() && $ua.browser() === 'Safari'
+          ($ua.isFromIos() && $ua.browser() === 'Safari') ||
+          $ua.isFromAndroidOs() ||
+          $ua.browser() === 'WEBVIEW'
             ? 'いい感じ'
             : '使えないブラウザ'
         }}
