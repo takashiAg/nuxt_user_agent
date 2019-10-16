@@ -30,10 +30,13 @@
         {{
           ($ua.isFromIos() && $ua.browser() === 'Safari') ||
           $ua.isFromAndroidOs() ||
-          $ua.browser() === 'WEBVIEW'
+          $ua.browser().toLowerCase() !== 'webview'
             ? 'いい感じ'
             : '使えないブラウザ'
         }}
+      </li>
+      <li v-if="$ua.browser().toLowerCase() !== 'webview'">
+        これはwebview
       </li>
     </ul>
   </div>
