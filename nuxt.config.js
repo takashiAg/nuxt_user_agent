@@ -1,14 +1,6 @@
 import path from 'path'
 import fs from 'fs'
 
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: '/nuxt_user_agent/'
-        }
-      }
-    : {}
 export default {
   mode: 'spa',
   server: {
@@ -75,7 +67,13 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+    }
   },
-  routerBase
+  router:
+    process.env.DEPLOY_ENV === 'GH_PAGES'
+      ? {
+        base: '/nuxt_user_agent/'
+      }
+      : {}
 }
