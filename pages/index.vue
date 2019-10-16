@@ -35,7 +35,7 @@
             : '使えないブラウザ'
         }}
       </li>
-      <li v-if="$ua.browser().toLowerCase() !== 'webview'">
+      <li v-if="$ua.browser().toLowerCase() === 'webview'">
         これはwebview
       </li>
     </ul>
