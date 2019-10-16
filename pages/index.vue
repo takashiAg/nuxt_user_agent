@@ -1,19 +1,19 @@
 <template>
   <div>
     <ul>
-      <li>{{ $ua.deviceType() }}</li>
-      <li>{{ $ua.os() }}</li>
-      <li>{{ $ua.osVersion() }}</li>
-      <li>{{ $ua.browser() }}</li>
-      <li>{{ $ua.browserVersion() }}</li>
-      <li>{{ $ua.browserVendor() }}</li>
+      <li>deviceType:{{ $ua.deviceType() }}</li>
+      <li>os:{{ $ua.os() }}</li>
+      <li>osVersion:{{ $ua.osVersion() }}</li>
+      <li>browser:{{ $ua.browser() }}</li>
+      <li>browserVersion:{{ $ua.browserVersion() }}</li>
+      <li>browserVendor:{{ $ua.browserVendor() }}</li>
       <li>{{ $ua.isFromIphone() ? 'iPhone' : 'not iPhone' }}</li>
       <li>{{ $ua.isFromIpad() ? 'iPad' : 'not iPad' }}</li>
       <li>{{ $ua.isFromIpod() ? 'iPod' : 'not iPod' }}</li>
       <li>{{ $ua.isFromIos() ? 'iOS' : 'not iOS' }}</li>
       <li>{{ $ua.isFromAndroidOs() ? 'Android OS' : 'not Android OS' }}</li>
       <li>{{ $ua.isFromAppliance() ? 'Appliance' : 'not Appliance' }}</li>
-      <li>{{ userAgent }}</li>
+      <li>rawUserAgent:{{ userAgent }}</li>
     </ul>
     <hr />
     <ul>
